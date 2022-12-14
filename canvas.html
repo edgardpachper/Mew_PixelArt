@@ -8,28 +8,41 @@
     <title>Aprendiendo a usar Canvas</title>
 </head>
 <body>
-    <canvas width="648" height="588"></canvas>
+    <canvas width="833.6" height="792.6"></canvas>
+
+    <style> canvas {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 800px;
+        } </style>
+
     <script>
         var pantalla = document.querySelector('canvas')
         var pincel = pantalla.getContext('2d')
         //  dibujar a MEW ANCHO 54 y alto 49
 
-        // dimensiones de cada pixel
-        ancho = 10
-        alto = 10
 
-        sep = 1.5 // ancho del separador
+        // dimensiones de cada pixel
+        ancho = 15
+        alto = 15
+
+        sep = 1.2 // ancho del separador
 
         // ancho final del canva
         totalAncho = 54
         totalAlto = 49
         HeightSep = totalAlto * (alto + sep) - sep 
+        console.log(HeightSep)
         WidthSep = totalAncho * (ancho + sep) - sep
+        console.log(WidthSep)
 
         // grid del fondo del canvas
         colorsep1 = "#dcdcdc"
-        pincel.fillStyle = colorsep1
-        pincel.fillRect(0, 0, WidthSep, HeightSep)
+        // pincel.fillStyle = colorsep1
+        // pincel.fillRect(0, 0, WidthSep, HeightSep)
 
         // colores (dependen del proyecto)
         // CONTORNO
@@ -432,6 +445,5 @@
         pixel(cont2, 33, 47)
         llenarColor(cont3, 34, 47, 35, 47)
     </script>
-    <H4 class="">CREADO POR: EDGARD PACHECO PEREZ</H4>
 </body>
 </html>
